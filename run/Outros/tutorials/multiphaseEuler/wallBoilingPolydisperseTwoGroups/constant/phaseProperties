@@ -1,0 +1,146 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      phaseProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases          (gas gas2 liquid);
+
+populationBalances (bubbles);
+
+gas
+{
+    type            purePhaseModel;
+
+    diameterModel   velocityGroup;
+    velocityGroupCoeffs
+    {
+        populationBalance   bubbles;
+
+        shapeModel          spherical;
+
+        sizeGroups
+        (
+            { dSph 1.0e-4; }
+            { dSph 1.2e-4; }
+            { dSph 1.44e-4; }
+            { dSph 1.728e-4; }
+            { dSph 2.074e-4; }
+            { dSph 2.49e-4; }
+            { dSph 2.99e-4; }
+            { dSph 3.6e-4; }
+            { dSph 4.3e-4; }
+            { dSph 5.16e-4; }
+        );
+    }
+
+    residualAlpha   1e-6;
+}
+
+gas2
+{
+    type            purePhaseModel;
+
+    diameterModel   velocityGroup;
+    velocityGroupCoeffs
+    {
+        populationBalance    bubbles;
+
+        shapeModel  spherical;
+
+        sizeGroups
+        (
+            { dSph 6.19e-4; }
+            { dSph 7.43e-4; }
+            { dSph 8.92e-4; }
+            { dSph 1.07e-3; }
+            { dSph 1.28e-3; }
+            { dSph 1.54e-3; }
+            { dSph 1.85e-3; }
+            { dSph 2.22e-3; }
+            { dSph 2.67e-3; }
+            { dSph 3.19e-3; }
+            { dSph 3.85e-3; }
+            { dSph 4.6e-3; }
+            { dSph 5.52e-3; }
+            { dSph 6.62e-3; }
+            { dSph 7.95e-3; }
+            { dSph 9.54e-3; }
+            { dSph 1.14e-2; }
+        );
+    }
+
+    residualAlpha   1e-6;
+}
+
+liquid
+{
+    type            purePhaseModel;
+
+    diameterModel   none;
+
+    residualAlpha   1e-6;
+}
+
+blending
+{
+    default
+    {
+        type            continuous;
+        phase           liquid;
+    }
+}
+
+surfaceTension
+{
+    gas_liquid
+    {
+        type            constant;
+        sigma           0.00176574;
+    }
+
+    gas2_liquid
+    {
+        $gas_liquid
+    }
+}
+
+populationBalanceCoeffs
+{
+    bubbles
+    {
+        continuousPhase liquid;
+
+        coalescenceModels
+        (
+            PrinceBlanch
+            {
+                turbulence      on;
+                buoyancy        on;
+                laminarShear    off;
+                C1              0.05;
+            }
+        );
+
+        binaryBreakupModels
+        (
+            LehrMilliesMewes
+            {}
+        );
+
+        breakupModels
+        ();
+    }
+}
+
+// ************************************************************************* //

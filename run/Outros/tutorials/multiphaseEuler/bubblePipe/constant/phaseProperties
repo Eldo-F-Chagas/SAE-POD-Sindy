@@ -1,0 +1,127 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      phaseProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+phases          (air1 air2 water);
+
+populationBalances (bubbles);
+
+air1
+{
+    type            pureIsothermalPhaseModel;
+
+    diameterModel   velocityGroup;
+    velocityGroupCoeffs
+    {
+        populationBalance bubbles;
+
+        shapeModel      spherical;
+
+        sizeGroups
+        (
+            { dSph 1e-3; }
+            { dSph 2e-3; }
+            { dSph 3e-3; }
+            { dSph 4e-3; }
+            { dSph 5e-3; }
+        );
+    }
+
+    residualAlpha   1e-6;
+}
+
+air2
+{
+    type            pureIsothermalPhaseModel;
+
+    diameterModel   velocityGroup;
+    velocityGroupCoeffs
+    {
+        populationBalance bubbles;
+
+        shapeModel      spherical;
+
+        sizeGroups
+        (
+            { dSph 6e-3; }
+            { dSph 7e-3; }
+            { dSph 8e-3; }
+            { dSph 9e-3; }
+            { dSph 10e-3; }
+            { dSph 11e-3; }
+            { dSph 12e-3; }
+        );
+    }
+
+    residualAlpha   1e-6;
+}
+
+water
+{
+    type            pureIsothermalPhaseModel;
+
+    diameterModel   none;
+
+    residualAlpha   1e-6;
+}
+
+blending
+{
+    default
+    {
+        type            continuous;
+        phase           water;
+    }
+}
+
+surfaceTension
+{
+    air1_water
+    {
+        type            constant;
+        sigma           0.083;
+    }
+
+    air2_water
+    {
+        type            constant;
+        sigma           0.083;
+    }
+}
+
+populationBalanceCoeffs
+{
+    bubbles
+    {
+        continuousPhase water;
+
+        coalescenceModels
+        (
+            LehrMilliesMewes
+            {}
+        );
+
+        binaryBreakupModels
+        (
+            LehrMilliesMewes
+            {}
+        );
+
+        breakupModels
+        ();
+    }
+}
+
+// ************************************************************************* //

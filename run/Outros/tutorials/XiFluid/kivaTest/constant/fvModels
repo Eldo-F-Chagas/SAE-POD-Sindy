@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvModels;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ignition
+{
+    type            constantbXiIgnition;
+
+    cellZone        ignition;
+
+    start           -15;
+    duration        20;
+    strength        2;
+
+    XiCorr
+    {
+        type            spherical;
+        cellZone        all;
+    }
+}
+
+
+// ************************************************************************* //

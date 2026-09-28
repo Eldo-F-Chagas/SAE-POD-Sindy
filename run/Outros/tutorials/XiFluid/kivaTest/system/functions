@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      functions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+setDeltaT
+{
+    libs            ("libutilityFunctionObjects.so");
+
+    type            setTimeStep;
+
+    deltaT
+    {
+        type            table;
+        values
+        (
+            (-180 0.25)
+            (-15 0.025)
+        );
+        interpolationScheme step;
+        outOfBounds     clamp;
+    }
+}
+
+#includeFunc multiValveEngineState
+
+#includeFunc bXiProgress
+#includeFunc cellMin(b)
+
+// ************************************************************************* //

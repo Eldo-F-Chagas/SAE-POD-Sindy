@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+blockMesh
+checkMesh
+setFields
+foamRun -solver incompressibleVoF | tee log.incompressibleVoF

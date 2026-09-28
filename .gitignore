@@ -1,0 +1,44 @@
+# OpenFOAM generated time directories (numeric names)
+run/*/[0-9]*/
+run/*/[0-9].*/
+run/*/processor*/
+run/*/postProcessing/
+run/*/VTK/
+run/*/dynamicCode/
+run/*/log*
+run/*/*.log
+
+# Large generated numerical/model/result files
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.keras
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# Generated caches/results
+**/cache/
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/resultados/**/best_model.*
+**/resultados/**/*.png
+**/resultados/**/*.mp4
+**/resultados/**/*.avi
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Any OpenFOAM numeric time directory at any depth
+[0-9]/
+[0-9].*/
+[0-9]*.[0-9]*/
+
+# Generated result directories are too large for GitHub
+resultados/
+**/resultados/
