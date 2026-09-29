@@ -1,0 +1,36 @@
+{
+  "selection_reason": "nenhum modelo atendeu aos limites; escolhido melhor compromisso por score",
+  "n_tested": 84,
+  "n_accepted": 0,
+  "limits": {
+    "derivative_error_limit": 0.8,
+    "trajectory_error_limit": 0.005,
+    "min_energy_capture": 0.8
+  },
+  "best": {
+    "pod_modes": 16,
+    "pod_energy_capture": 0.9260911783556487,
+    "polynomial_order": 2,
+    "use_sine": true,
+    "alpha": 0.03,
+    "library_size": 185,
+    "n_possible_terms": 2960,
+    "n_nonzero_terms": 50,
+    "sparsity": 0.9831081081081081,
+    "derivative_l2_error": 0.5042639683778993,
+    "trajectory_l2_error": 0.8529512113547381,
+    "trajectory_method": "reference_guided_one_step_search",
+    "accepted": false,
+    "score": 171.22479520439296
+  },
+  "free_integration": {
+    "success": true,
+    "trajectory_l2_error": 1.6648480499031144,
+    "message": null
+  },
+  "files": {
+    "csv": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/pod_sindy_search_auto/pod_sindy_search_results.csv",
+    "best_model": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/pod_sindy_search_auto/best_pod_sindy_model.npz",
+    "best_equations": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/pod_sindy_search_auto/best_equations.txt"
+  }
+}

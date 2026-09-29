@@ -1,0 +1,22 @@
+{
+  "architecture": "SAE+SINDy",
+  "source_file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/cavity 10 000/Codigos Cavity 10.000/SAE/resultados/latents.npz",
+  "n_snapshots": 565,
+  "n_coordinates": 8,
+  "dt": 0.008500009775161743,
+  "polynomial_order": 2,
+  "use_sine": true,
+  "selected_alpha": 0.001,
+  "derivative_best_alpha": 0.001,
+  "library_size": 61,
+  "derivative_l2_error": 0.6158779541966062,
+  "trajectory_l2_error": 0.01768273922577551,
+  "trajectory_method": "reference_guided_one_step",
+  "n_nonzero_terms": 151,
+  "integration_message": "Required step size is less than spacing between numbers. | Fallback: reference-guided one-step SINDy",
+  "metadata": {
+    "latent_dim": 8,
+    "dt": 0.008500009775161743
+  },
+  "heatmap_examples": null
+}

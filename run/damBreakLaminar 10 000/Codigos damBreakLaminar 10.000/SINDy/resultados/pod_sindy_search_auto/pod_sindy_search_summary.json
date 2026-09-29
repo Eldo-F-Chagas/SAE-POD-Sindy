@@ -1,0 +1,36 @@
+{
+  "selection_reason": "nenhum modelo atendeu aos limites; escolhido melhor compromisso por score",
+  "n_tested": 84,
+  "n_accepted": 0,
+  "limits": {
+    "derivative_error_limit": 0.8,
+    "trajectory_error_limit": 0.005,
+    "min_energy_capture": 0.8
+  },
+  "best": {
+    "pod_modes": 16,
+    "pod_energy_capture": 0.949436786539967,
+    "polynomial_order": 1,
+    "use_sine": false,
+    "alpha": 0.1,
+    "library_size": 17,
+    "n_possible_terms": 272,
+    "n_nonzero_terms": 31,
+    "sparsity": 0.8860294117647058,
+    "derivative_l2_error": 0.7131831521975018,
+    "trajectory_l2_error": 0.39248899869419773,
+    "trajectory_method": "reference_guided_one_step_search",
+    "accepted": false,
+    "score": 79.41777132614526
+  },
+  "free_integration": {
+    "success": true,
+    "trajectory_l2_error": 0.7826513605207478,
+    "message": null
+  },
+  "files": {
+    "csv": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar 10 000/Codigos damBreakLaminar 10.000/SINDy/resultados/pod_sindy_search_auto/pod_sindy_search_results.csv",
+    "best_model": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar 10 000/Codigos damBreakLaminar 10.000/SINDy/resultados/pod_sindy_search_auto/best_pod_sindy_model.npz",
+    "best_equations": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar 10 000/Codigos damBreakLaminar 10.000/SINDy/resultados/pod_sindy_search_auto/best_equations.txt"
+  }
+}

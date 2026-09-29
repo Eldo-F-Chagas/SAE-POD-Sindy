@@ -1,0 +1,17 @@
+UNIVERSIDADE FEDERAL DE MATO GROSSO
+PRÓ-REITORIA DE PESQUISA
+PROGRAMA INSTITUCIONAL DE INICIAÇÃO CIENTÍFICA
+
+ORIENTAÇÕES EXTRAÍDAS DO MODELO DOC
+
+- Manter o formulário de apresentação no início do documento.
+- Elaborar o relatório final pelo aluno, com auxílio do orientador.
+- O conjunto INTRODUÇÃO, REVISÃO DA LITERATURA, METODOLOGIA, RESULTADOS E DISCUSSÃO, CONCLUSÃO, DIFICULDADES ENCONTRADAS, REFERÊNCIAS BIBLIOGRÁFICAS e PRODUTOS GERADOS deve ter entre 10 e 25 páginas.
+- Usar folha A4, fonte Arial 12 e espaçamento 1,5.
+- Iniciar cada tópico do sumário em nova página.
+- Elementos previstos: formulário, capa, folha de rosto, sumário, resumo, lista de figuras, lista de tabelas, lista de anexos opcional e os oito capítulos obrigatórios.
+- O resumo deve ser corrido, sem subdivisões explícitas em introdução, objetivo etc.
+- As referências devem seguir normas atualizadas da ABNT.
+- Produtos gerados devem listar artigos, resumos, livros/capítulos, textos e apresentações efetivamente produzidos.
+
+O relatório LaTeX consolidado implementa essas orientações. A lista de anexos foi omitida por não haver anexos formais; os produtos digitais são descritos no capítulo 8.

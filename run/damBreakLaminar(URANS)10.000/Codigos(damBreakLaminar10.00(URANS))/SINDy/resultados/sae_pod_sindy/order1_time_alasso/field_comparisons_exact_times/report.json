@@ -1,0 +1,57 @@
+[
+  {
+    "requested_time": 0.0,
+    "actual_time": 0.0,
+    "index": 0,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.00s.png",
+    "|U|_rel_l2": 0.0,
+    "|U|_r2": 1.0,
+    "alpha.water_rel_l2": 0.0,
+    "alpha.water_r2": 1.0
+  },
+  {
+    "requested_time": 0.25,
+    "actual_time": 0.25,
+    "index": 250,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.25s.png",
+    "|U|_rel_l2": 0.2887505078773497,
+    "|U|_r2": 0.6899242460966456,
+    "alpha.water_rel_l2": 0.2140748378369492,
+    "alpha.water_r2": 0.9466026081435649
+  },
+  {
+    "requested_time": 0.5,
+    "actual_time": 0.5,
+    "index": 500,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.50s.png",
+    "|U|_rel_l2": 0.6120203137141531,
+    "|U|_r2": 0.35013787352823567,
+    "alpha.water_rel_l2": 0.45877340476606293,
+    "alpha.water_r2": 0.7468968277315633
+  },
+  {
+    "requested_time": 0.75,
+    "actual_time": 0.75,
+    "index": 750,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.75s.png",
+    "|U|_rel_l2": 0.3764540122949996,
+    "|U|_r2": 0.5971794455497286,
+    "alpha.water_rel_l2": 0.23774570315749424,
+    "alpha.water_r2": 0.9317877730177943
+  },
+  {
+    "requested_time": 1.0,
+    "actual_time": 1.0,
+    "index": 1000,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_1.00s.png",
+    "|U|_rel_l2": 0.3301837846386118,
+    "|U|_r2": 0.7098463167044171,
+    "alpha.water_rel_l2": 0.1573638574642721,
+    "alpha.water_r2": 0.970422327003724
+  }
+]

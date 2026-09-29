@@ -1,0 +1,12 @@
+ESTES RESULTADOS SÃO INVÁLIDOS PARA VALIDAÇÃO FÍSICA.
+
+Motivos:
+1. A rotina antiga tratava o tempo OpenFOAM como normalizado em [0,1], embora o caso termine em 5 s.
+2. Após aproximadamente 1 s, o índice era saturado no último snapshot.
+3. A referência era construída a partir da POD antiga, configurada com campos de dam-break e snapshots normalizados.
+4. O código procurava alpha.water, inexistente no caso cavity.
+
+Use a validação corrigida em:
+../openfoam_direct_vs_sindy/report.json
+
+Ela lê U, p, T e k diretamente do OpenFOAM e alinha os dados pelos tempos físicos reais.

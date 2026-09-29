@@ -29,6 +29,15 @@ run/*/*.log
 **/resultados/**/*.mp4
 **/resultados/**/*.avi
 
+# LaTeX build artifacts and local backups
+*.aux
+*.lof
+*.lot
+*.out
+*.toc
+*.log
+*.bak_*
+
 # OS/editor
 .DS_Store
 Thumbs.db

@@ -1,0 +1,57 @@
+[
+  {
+    "requested_time": 0.0,
+    "actual_time": 0.0,
+    "index": 0,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.00s.png",
+    "|U|_rel_l2": 0.2624940720954721,
+    "|U|_r2": 0.7985854549249123,
+    "alpha.water_rel_l2": 0.11345272720387045,
+    "alpha.water_r2": 0.9832162264680059
+  },
+  {
+    "requested_time": 0.25,
+    "actual_time": 0.25,
+    "index": 25,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.25s.png",
+    "|U|_rel_l2": 0.3107565009180754,
+    "|U|_r2": 0.5923158824559793,
+    "alpha.water_rel_l2": 0.16333327081108048,
+    "alpha.water_r2": 0.9681643677539211
+  },
+  {
+    "requested_time": 0.5,
+    "actual_time": 0.5,
+    "index": 50,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.50s.png",
+    "|U|_rel_l2": 0.9216182304410014,
+    "|U|_r2": -0.8117794295122676,
+    "alpha.water_rel_l2": 0.3077049998467944,
+    "alpha.water_r2": 0.8807586587095545
+  },
+  {
+    "requested_time": 0.75,
+    "actual_time": 0.75,
+    "index": 75,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_0.75s.png",
+    "|U|_rel_l2": 0.15581084090600736,
+    "|U|_r2": 0.8968689077363086,
+    "alpha.water_rel_l2": 0.09607314592368542,
+    "alpha.water_r2": 0.988667813858582
+  },
+  {
+    "requested_time": 1.0,
+    "actual_time": 1.0,
+    "index": 100,
+    "trajectory": "free_integration",
+    "file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(LES_WALE)10.000/Codigos damBreakLaminar LES_WALE 10.000/SINDy/resultados/sae_pod_sindy/order1_time_alasso/field_comparisons_exact_times/time_1.00s.png",
+    "|U|_rel_l2": 0.6114941219576429,
+    "|U|_r2": -0.25016837575378736,
+    "alpha.water_rel_l2": 0.2073571981511522,
+    "alpha.water_r2": 0.9435668913963994
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "requested_times": [
+    0.001,
+    1.25,
+    2.5,
+    3.75,
+    5.0
+  ],
+  "matched_times": [
+    {
+      "requested_time": 0.001,
+      "actual_time": 0.001,
+      "index": 0
+    },
+    {
+      "requested_time": 1.25,
+      "actual_time": 1.25,
+      "index": 1530
+    },
+    {
+      "requested_time": 3.75,
+      "actual_time": 3.75,
+      "index": 4425
+    },
+    {
+      "requested_time": 5.0,
+      "actual_time": 5.0,
+      "index": 5644
+    }
+  ],
+  "missing_times": [
+    2.5
+  ],
+  "time_tolerance": 0.0002550000000000852,
+  "comparison_with_sindy": true,
+  "trajectory_method": "reference_guided_one_step"
+}

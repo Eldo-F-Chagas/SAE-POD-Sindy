@@ -1,0 +1,36 @@
+{
+  "selection_reason": "modelo aceit\u00e1vel com m\u00e1xima esparsidade",
+  "n_tested": 84,
+  "n_accepted": 56,
+  "limits": {
+    "derivative_error_limit": 0.8,
+    "trajectory_error_limit": 0.005,
+    "min_energy_capture": 0.8
+  },
+  "best": {
+    "pod_modes": 16,
+    "pod_energy_capture": 0.9988570093052497,
+    "polynomial_order": 2,
+    "use_sine": true,
+    "alpha": 0.01,
+    "library_size": 185,
+    "n_possible_terms": 2960,
+    "n_nonzero_terms": 30,
+    "sparsity": 0.9898648648648649,
+    "derivative_l2_error": 0.7632532173770619,
+    "trajectory_l2_error": 0.001553994455291136,
+    "trajectory_method": "reference_guided_one_step_search",
+    "accepted": true,
+    "score": 1.2673991965633382
+  },
+  "free_integration": {
+    "success": false,
+    "trajectory_l2_error": null,
+    "message": "Required step size is less than spacing between numbers."
+  },
+  "files": {
+    "csv": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/cavity 10 000/Codigos Cavity 10.000/SINDy/resultados_corrigidos/pod_sindy_search_auto/pod_sindy_search_results.csv",
+    "best_model": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/cavity 10 000/Codigos Cavity 10.000/SINDy/resultados_corrigidos/pod_sindy_search_auto/best_pod_sindy_model.npz",
+    "best_equations": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/cavity 10 000/Codigos Cavity 10.000/SINDy/resultados_corrigidos/pod_sindy_search_auto/best_equations.txt"
+  }
+}

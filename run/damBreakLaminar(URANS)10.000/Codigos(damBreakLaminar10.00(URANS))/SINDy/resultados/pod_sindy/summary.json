@@ -1,0 +1,63 @@
+{
+  "architecture": "POD+SINDy",
+  "source_file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/POD/resultados/resultados_pod_completos.npz",
+  "n_snapshots": 10001,
+  "n_coordinates": 8,
+  "dt": 9.999999999998899e-05,
+  "polynomial_order": 2,
+  "use_sine": false,
+  "selected_alpha": 0.0001,
+  "derivative_best_alpha": 0.0001,
+  "library_size": 45,
+  "derivative_l2_error": 0.7835537848500129,
+  "trajectory_l2_error": 0.0030019793253000153,
+  "trajectory_method": "reference_guided_one_step",
+  "n_nonzero_terms": 292,
+  "integration_message": "Required step size is less than spacing between numbers. | Fallback: reference-guided one-step SINDy",
+  "metadata": {
+    "pod_modes_used": 8,
+    "pod_total_modes": 4536,
+    "pod_energy_capture": 0.8462175995854234,
+    "dt": 9.999999999998899e-05
+  },
+  "heatmap_examples": {
+    "requested_times": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "matched_times": [
+      {
+        "requested_time": 0.0,
+        "actual_time": 0.0,
+        "index": 0
+      },
+      {
+        "requested_time": 0.25,
+        "actual_time": 0.25,
+        "index": 2500
+      },
+      {
+        "requested_time": 0.5,
+        "actual_time": 0.5,
+        "index": 5000
+      },
+      {
+        "requested_time": 0.75,
+        "actual_time": 0.75,
+        "index": 7500
+      },
+      {
+        "requested_time": 1.0,
+        "actual_time": 1.0,
+        "index": 10000
+      }
+    ],
+    "missing_times": [],
+    "time_tolerance": 5.099999999999438e-05,
+    "comparison_with_sindy": true,
+    "trajectory_method": "reference_guided_one_step"
+  }
+}
