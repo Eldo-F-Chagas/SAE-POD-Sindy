@@ -1,0 +1,1 @@
+Esta pasta reúne diagnósticos gerais de SINDy. Os modelos específicos ficam separados em POD-Sindy, SAE-Sindy e SAE-POD-Sindy.

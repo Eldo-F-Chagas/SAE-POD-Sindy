@@ -1,0 +1,3 @@
+caso,integrator,n,aceitos,taxa_aceitacao,free_rel_l2_min,free_rel_l2_mediana,derivative_rel_l2_mediana
+LES--WALE,RK45,24,0,0.0,0.8578188066377139,3.221345066064542,0.3661755546540914
+LES--WALE,Radau,24,0,0.0,0.8578189431474177,3.221344158302049,0.3661755546540914
