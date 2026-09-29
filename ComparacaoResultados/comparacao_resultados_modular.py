@@ -429,6 +429,44 @@ def gerar_tabelas_extras(busca_rows):
     return periodos, campos, sae_val, por_alpha, por_smooth, por_integrador, correl
 
 
+def gerar_figuras_imagens_existentes():
+    """Monta painéis com imagens já geradas pelos casos SAE--POD--SINDy."""
+    itens_heatmap = [(caso, cfg["hibrido"] / "temporal_learning_heatmap.png") for caso, cfg in CASOS.items()]
+    itens_campos = [
+        ("Laminar t=0,50 s", CASOS["Laminar"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
+        ("URANS t=0,50 s", CASOS["URANS"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
+        ("LES--WALE t=0,50 s", CASOS["LES--WALE"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
+        ("Cavity t=0,75 s", CASOS["Cavity"]["hibrido"] / "field_comparisons_exact_times" / "time_0.75s.png"),
+    ]
+
+    def painel(itens, saida, titulo):
+        fig, axes = plt.subplots(2, 2, figsize=(14, 9))
+        for ax, (rotulo, path) in zip(axes.ravel(), itens):
+            if path.exists():
+                img = plt.imread(path)
+                ax.imshow(img)
+                ax.set_title(rotulo, fontsize=11)
+            else:
+                ax.text(0.5, 0.5, f"Imagem não encontrada\n{path}", ha="center", va="center", fontsize=8)
+                ax.set_title(rotulo, fontsize=11)
+            ax.axis("off")
+        fig.suptitle(titulo, fontsize=14)
+        fig.tight_layout()
+        fig.savefig(OUT / saida, dpi=300, bbox_inches="tight")
+        plt.close(fig)
+
+    painel(
+        itens_heatmap,
+        "fig_painel_temporal_learning_heatmap.png",
+        "Mapas de aprendizado temporal dos modelos SAE--POD--SINDy",
+    )
+    painel(
+        itens_campos,
+        "fig_painel_field_comparisons_tempos_alvo.png",
+        "Comparações de campos SAE--POD--SINDy em tempos alvo",
+    )
+
+
 def gerar_figuras_extras(busca_rows, periodos, campos, sae_val, por_alpha, por_smooth, por_integrador, correl):
     labels = list(CASOS.keys())
     colors = {c: plt.cm.tab10(i) for i, c in enumerate(labels)}
@@ -543,6 +581,7 @@ def main():
     gerar_figuras(linhas, temporal, busca_rows)
     extras = gerar_tabelas_extras(busca_rows)
     gerar_figuras_extras(busca_rows, *extras)
+    gerar_figuras_imagens_existentes()
     print("Arquivos gerados em:", OUT)
     for p in sorted(OUT.glob("comparacao_*.csv")):
         print(" -", p.name)
