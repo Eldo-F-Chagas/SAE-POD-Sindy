@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import csv
 import json
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -430,19 +431,41 @@ def gerar_tabelas_extras(busca_rows):
 
 
 def gerar_figuras_imagens_existentes():
-    """Monta painéis com imagens já geradas pelos casos SAE--POD--SINDy."""
+    """Monta painéis e salva cópias individuais com nome do caso.
+
+    As imagens individuais recebem nomes explícitos para distinguir caso,
+    arquitetura e tipo de gráfico.
+    """
+    slug = {
+        "Laminar": "laminar",
+        "URANS": "urans",
+        "LES--WALE": "les_wale",
+        "Cavity": "cavity",
+    }
     itens_heatmap = [(caso, cfg["hibrido"] / "temporal_learning_heatmap.png") for caso, cfg in CASOS.items()]
     itens_curvas_erro = [(caso, cfg["hibrido"] / "temporal_error_curves.png") for caso, cfg in CASOS.items()]
     itens_campos = [
-        ("Laminar t=0,50 s", CASOS["Laminar"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
-        ("URANS t=0,50 s", CASOS["URANS"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
-        ("LES--WALE t=0,50 s", CASOS["LES--WALE"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
-        ("Cavity t=0,75 s", CASOS["Cavity"]["hibrido"] / "field_comparisons_exact_times" / "time_0.75s.png"),
+        ("Laminar t=0,50 s", CASOS["Laminar"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png", "laminar", "t050"),
+        ("URANS t=0,50 s", CASOS["URANS"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png", "urans", "t050"),
+        ("LES--WALE t=0,50 s", CASOS["LES--WALE"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png", "les_wale", "t050"),
+        ("Cavity t=0,75 s", CASOS["Cavity"]["hibrido"] / "field_comparisons_exact_times" / "time_0.75s.png", "cavity", "t075"),
     ]
+
+    # Cópias individuais com nomes inequívocos.
+    for caso, path in itens_heatmap:
+        if path.exists():
+            shutil.copy2(path, OUT / f"sae_pod_sindy_{slug[caso]}_temporal_learning_heatmap.png")
+    for caso, path in itens_curvas_erro:
+        if path.exists():
+            shutil.copy2(path, OUT / f"sae_pod_sindy_{slug[caso]}_temporal_error_curves.png")
+    for _, path, caso_slug, tempo_slug in itens_campos:
+        if path.exists():
+            shutil.copy2(path, OUT / f"sae_pod_sindy_{caso_slug}_field_comparison_{tempo_slug}.png")
 
     def painel(itens, saida, titulo):
         fig, axes = plt.subplots(2, 2, figsize=(14, 9))
-        for ax, (rotulo, path) in zip(axes.ravel(), itens):
+        for ax, item in zip(axes.ravel(), itens):
+            rotulo, path = item[0], item[1]
             if path.exists():
                 img = plt.imread(path)
                 ax.imshow(img)
