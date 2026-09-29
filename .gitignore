@@ -38,6 +38,10 @@ run/*/*.log
 *.log
 *.bak_*
 
+# Local-only directories (not published on GitHub)
+/Relatorio_Final_LaTeX/
+/run/Outros/
+
 # OS/editor
 .DS_Store
 Thumbs.db
