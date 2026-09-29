@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 BASE = Path("/home/mlep-pc-ubuntu/OpenFOAM/SAE-POD-Sindy")
 RUN = BASE / "run"
-OUT = BASE / "ComparacaoResultados"
+OUT = Path(__file__).resolve().parent
 OUT.mkdir(parents=True, exist_ok=True)
 
 CASOS = {
@@ -432,6 +432,7 @@ def gerar_tabelas_extras(busca_rows):
 def gerar_figuras_imagens_existentes():
     """Monta painéis com imagens já geradas pelos casos SAE--POD--SINDy."""
     itens_heatmap = [(caso, cfg["hibrido"] / "temporal_learning_heatmap.png") for caso, cfg in CASOS.items()]
+    itens_curvas_erro = [(caso, cfg["hibrido"] / "temporal_error_curves.png") for caso, cfg in CASOS.items()]
     itens_campos = [
         ("Laminar t=0,50 s", CASOS["Laminar"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
         ("URANS t=0,50 s", CASOS["URANS"]["hibrido"] / "field_comparisons_exact_times" / "time_0.50s.png"),
@@ -459,6 +460,11 @@ def gerar_figuras_imagens_existentes():
         itens_heatmap,
         "fig_painel_temporal_learning_heatmap.png",
         "Mapas de aprendizado temporal dos modelos SAE--POD--SINDy",
+    )
+    painel(
+        itens_curvas_erro,
+        "fig_painel_temporal_error_curves.png",
+        "Curvas temporais de erro dos modelos SAE--POD--SINDy",
     )
     painel(
         itens_campos,
