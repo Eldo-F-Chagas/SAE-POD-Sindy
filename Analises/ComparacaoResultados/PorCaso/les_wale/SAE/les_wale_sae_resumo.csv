@@ -1,0 +1,2 @@
+caso,sae_train_r2,sae_val_r2,sae_train_relL2_medio,sae_val_relL2_medio,sae_val_relL2_p95,sae_best_epoch,sae_menor_val_loss
+LES--WALE,0.5853270888328552,0.17488031089305878,0.6412295798460642,0.894677358865738,1.0103687047958374,145.0,0.7025293111801147

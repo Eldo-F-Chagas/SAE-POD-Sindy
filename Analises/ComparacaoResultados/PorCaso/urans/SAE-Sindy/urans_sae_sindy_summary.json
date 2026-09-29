@@ -1,0 +1,22 @@
+{
+  "architecture": "SAE+SINDy",
+  "source_file": "/home/mlep-pc-ubuntu/OpenFOAM/mlep-pc-ubuntu-13/run/damBreakLaminar(URANS)10.000/Codigos(damBreakLaminar10.00(URANS))/SAE/resultados/latents.npz",
+  "n_snapshots": 1001,
+  "n_coordinates": 4,
+  "dt": 0.0009999871253967285,
+  "polynomial_order": 2,
+  "use_sine": true,
+  "selected_alpha": 0.001,
+  "derivative_best_alpha": 0.001,
+  "library_size": 23,
+  "derivative_l2_error": 0.8985427552547192,
+  "trajectory_l2_error": 0.021021247901096066,
+  "trajectory_method": "reference_guided_one_step",
+  "n_nonzero_terms": 91,
+  "integration_message": "Required step size is less than spacing between numbers. | Fallback: reference-guided one-step SINDy",
+  "metadata": {
+    "latent_dim": 4,
+    "dt": 0.0009999871253967285
+  },
+  "heatmap_examples": null
+}

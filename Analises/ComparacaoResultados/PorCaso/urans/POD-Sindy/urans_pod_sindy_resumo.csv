@@ -1,0 +1,2 @@
+caso,pod_sindy_snapshots,pod_sindy_coords,pod_sindy_dt,pod_sindy_deriv_relL2,pod_sindy_traj_relL2,pod_sindy_traj_method,pod_sindy_coef_nao_nulos,pod_sindy_library_size,pod_sindy_pod_energy_capture,pod_sindy_integration_message
+URANS,10001.0,8.0,9.999999999998899e-05,0.7835537848500129,0.0030019793253000153,reference_guided_one_step,292.0,45.0,0.8462175995854234,Required step size is less than spacing between numbers. | Fallback: reference-guided one-step SINDy

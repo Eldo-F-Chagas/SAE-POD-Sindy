@@ -1,0 +1,2 @@
+caso,sae_train_r2,sae_val_r2,sae_train_relL2_medio,sae_val_relL2_medio,sae_val_relL2_p95,sae_best_epoch,sae_menor_val_loss
+URANS,0.9488250613212585,0.9418347477912903,0.23742221227001756,0.24089814618229866,0.36067715883255,148.0,0.019508404657244682

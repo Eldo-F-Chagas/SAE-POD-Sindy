@@ -1,0 +1,2 @@
+caso,pod_sindy_snapshots,pod_sindy_coords,pod_sindy_dt,pod_sindy_deriv_relL2,pod_sindy_traj_relL2,pod_sindy_traj_method,pod_sindy_coef_nao_nulos,pod_sindy_library_size,pod_sindy_pod_energy_capture,pod_sindy_integration_message
+LES--WALE,1001.0,8.0,0.0010000000000000009,0.4936176546936898,1.6517845034735608,solve_ivp,149.0,45.0,0.8379633073760085,

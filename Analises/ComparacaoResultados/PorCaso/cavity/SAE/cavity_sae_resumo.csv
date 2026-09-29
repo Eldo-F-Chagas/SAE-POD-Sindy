@@ -1,0 +1,2 @@
+caso,sae_train_r2,sae_val_r2,sae_train_relL2_medio,sae_val_relL2_medio,sae_val_relL2_p95,sae_best_epoch,sae_menor_val_loss
+Cavity,0.8090164661407471,0.8251942992210388,0.4619052911886072,0.39169273756246653,0.44620707631111145,78.0,0.11344248056411743

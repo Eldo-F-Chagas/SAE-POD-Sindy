@@ -1,0 +1,11 @@
+caso,requested_time,actual_time,index,trajectory,campo,rel_l2,r2
+URANS,0.0,0.0,0,free_integration,alpha.water,0.0,1.0
+URANS,0.0,0.0,0,free_integration,|U|,0.0,1.0
+URANS,0.25,0.25,250,free_integration,alpha.water,0.2140748378369492,0.9466026081435649
+URANS,0.25,0.25,250,free_integration,|U|,0.2887505078773497,0.6899242460966456
+URANS,0.5,0.5,500,free_integration,alpha.water,0.45877340476606293,0.7468968277315633
+URANS,0.5,0.5,500,free_integration,|U|,0.6120203137141531,0.35013787352823567
+URANS,0.75,0.75,750,free_integration,alpha.water,0.23774570315749424,0.9317877730177943
+URANS,0.75,0.75,750,free_integration,|U|,0.3764540122949996,0.5971794455497286
+URANS,1.0,1.0,1000,free_integration,alpha.water,0.1573638574642721,0.970422327003724
+URANS,1.0,1.0,1000,free_integration,|U|,0.3301837846386118,0.7098463167044171

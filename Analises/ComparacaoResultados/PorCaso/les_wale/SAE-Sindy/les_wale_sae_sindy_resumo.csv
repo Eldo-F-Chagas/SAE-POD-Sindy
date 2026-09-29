@@ -1,0 +1,2 @@
+caso,sae_sindy_snapshots,sae_sindy_coords,sae_sindy_dt,sae_sindy_deriv_relL2,sae_sindy_traj_relL2,sae_sindy_traj_method,sae_sindy_coef_nao_nulos,sae_sindy_library_size,sae_sindy_integration_message
+LES--WALE,101.0,8.0,0.009999990463256836,0.3661389069832889,0.23137163366528024,reference_guided_one_step,469.0,61.0,Required step size is less than spacing between numbers. | Fallback: reference-guided one-step SINDy

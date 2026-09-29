@@ -1,0 +1,2 @@
+caso,sae_train_r2,sae_val_r2,sae_train_relL2_medio,sae_val_relL2_medio,sae_val_relL2_p95,sae_best_epoch,sae_menor_val_loss
+Laminar,0.8221098780632019,0.13299120962619781,0.40325324730331386,0.9175622993707657,0.9776348620653152,47.0,0.6632754802703857
